@@ -1,0 +1,5 @@
+.charProfileText {
+    background-color: rgba(204, 91, 65, 255);
+    left: 10%;
+    top: 10px;
+}

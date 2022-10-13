@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/GameOverlay.uss?fileID=7433441132597879392&amp;guid=c8a48aab2d5e6ce46b1e9f9959718348&amp;type=3#GameOverlay" />
+    <ui:VisualElement style="height: 122px; width: 142px; left: 5%; top: 10px;">
+        <ui:Label text="Player 1" display-tooltip-when-elided="true" name="Player1" class="charProfileText" />
+        <ui:Label text="$: []" display-tooltip-when-elided="true" name="P1Money" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+        <ui:Label text="Treasure: []" display-tooltip-when-elided="true" name="P1Treasure" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+    </ui:VisualElement>
+    <ui:VisualElement style="height: 122px; width: 142px; left: 25%; top: 10px; position: absolute;">
+        <ui:Label text="Player 2" display-tooltip-when-elided="true" name="Player2" class="charProfileText" style="background-color: rgb(204, 183, 65);" />
+        <ui:Label text="$: []" display-tooltip-when-elided="true" name="P2Money" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+        <ui:Label text="Treasure: []" display-tooltip-when-elided="true" name="P2Treasure" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+    </ui:VisualElement>
+    <ui:VisualElement style="height: 122px; width: 142px; left: 45%; top: 10px; position: absolute;">
+        <ui:Label text="Player 3" display-tooltip-when-elided="true" name="Player3" class="charProfileText" style="background-color: rgb(95, 204, 65);" />
+        <ui:Label text="$: []" display-tooltip-when-elided="true" name="P3Money" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+        <ui:Label text="Treasure: []" display-tooltip-when-elided="true" name="P3Treasure" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+    </ui:VisualElement>
+    <ui:VisualElement style="height: 122px; width: 142px; left: 65%; top: 10px; position: absolute;">
+        <ui:Label text="Player 4" display-tooltip-when-elided="true" name="Player4" class="charProfileText" style="background-color: rgb(65, 163, 204);" />
+        <ui:Label text="$: []" display-tooltip-when-elided="true" name="P4Money" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+        <ui:Label text="Treasure: []" display-tooltip-when-elided="true" name="P4Treasure" class="charProfileText" style="background-color: rgb(99, 99, 99);" />
+    </ui:VisualElement>
+    <ui:Label text="Notes: Sprites are placeholders, Small grass = cards, large grass = treasure, circles = traps; delete this ui element later" display-tooltip-when-elided="true" style="background-color: rgb(147, 40, 37); top: 1%; position: absolute;" />
+    <ui:VisualElement name="CardBox" style="position: absolute; top: 65%; left: 40px; height: 172px; width: 454px; background-color: rgba(137, 99, 54, 0.35);">
+        <ui:IMGUIContainer style="background-image: url(&apos;project://database/Assets/Sprites/character_0022.png?fileID=2800000&amp;guid=a0f3b9eae67c3cd4aa935f45917eea3c&amp;type=3#character_0022&apos;); height: 78px; width: 79px; background-color: rgba(255, 255, 255, 255);">
+            <ui:Label text="PH_Name" display-tooltip-when-elided="true" style="top: -15px; background-color: rgba(75, 75, 75, 255);" />
+            <ui:Label text="[#]: Does __?" display-tooltip-when-elided="true" style="background-color: rgb(75, 75, 75); top: 65px;" />
+        </ui:IMGUIContainer>
+        <ui:IMGUIContainer style="background-image: url(&apos;project://database/Assets/Sprites/character_0022.png?fileID=2800000&amp;guid=a0f3b9eae67c3cd4aa935f45917eea3c&amp;type=3#character_0022&apos;); height: 78px; width: 79px; background-color: rgb(255, 255, 255); right: auto; left: 90px; top: 0; position: absolute;">
+            <ui:Label text="PH_Name" display-tooltip-when-elided="true" style="top: -15px; background-color: rgb(75, 75, 75);" />
+            <ui:Label text="[#]: Does __?" display-tooltip-when-elided="true" style="background-color: rgb(75, 75, 75); top: 65px;" />
+        </ui:IMGUIContainer>
+        <ui:IMGUIContainer style="background-image: url(&apos;project://database/Assets/Sprites/character_0022.png?fileID=2800000&amp;guid=a0f3b9eae67c3cd4aa935f45917eea3c&amp;type=3#character_0022&apos;); height: 78px; width: 79px; background-color: rgb(255, 255, 255); right: auto; left: 180px; top: 0; position: absolute;">
+            <ui:Label text="PH_Name" display-tooltip-when-elided="true" style="top: -15px; background-color: rgb(75, 75, 75);" />
+            <ui:Label text="[#]: Does __?" display-tooltip-when-elided="true" style="background-color: rgb(75, 75, 75); top: 65px;" />
+        </ui:IMGUIContainer>
+        <ui:IMGUIContainer style="background-image: url(&apos;project://database/Assets/Sprites/character_0022.png?fileID=2800000&amp;guid=a0f3b9eae67c3cd4aa935f45917eea3c&amp;type=3#character_0022&apos;); height: 78px; width: 79px; background-color: rgb(255, 255, 255); right: auto; left: 270px; top: 0; position: absolute;">
+            <ui:Label text="PH_Name" display-tooltip-when-elided="true" style="top: -15px; background-color: rgb(75, 75, 75);" />
+            <ui:Label text="[#]: Does __?" display-tooltip-when-elided="true" style="background-color: rgb(75, 75, 75); top: 65px;" />
+        </ui:IMGUIContainer>
+        <ui:IMGUIContainer style="background-image: url(&apos;project://database/Assets/Sprites/character_0022.png?fileID=2800000&amp;guid=a0f3b9eae67c3cd4aa935f45917eea3c&amp;type=3#character_0022&apos;); height: 78px; width: 79px; background-color: rgb(255, 255, 255); right: auto; left: 360px; top: 0; position: absolute;">
+            <ui:Label text="PH_Name" display-tooltip-when-elided="true" style="top: -15px; background-color: rgb(75, 75, 75);" />
+            <ui:Label text="[#]: Does __?" display-tooltip-when-elided="true" style="background-color: rgb(75, 75, 75); top: 65px;" />
+        </ui:IMGUIContainer>
+    </ui:VisualElement>
+</ui:UXML>
