@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public GameObject pit;
+
     Vector2 movement;
 
     // Update is called once per frame
@@ -15,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            Instantiate(pit, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
+        }
+
     }
 
     void FixedUpdate()
