@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Pit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int lifeTime = 5;
+    public void Start()
     {
-        //Destroy(this.gameObject, 2f);
+        StartCoroutine(WaitThenDie());
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator WaitThenDie()
     {
-        
+        yield return new WaitForSeconds(lifeTime);
+        Destroy(this.gameObject);
     }
 }
