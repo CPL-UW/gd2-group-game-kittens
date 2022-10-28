@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Carrot
   - Pit
+  - Radar
   layers:
   - Default
   - TransparentFX

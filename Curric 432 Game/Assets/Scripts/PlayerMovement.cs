@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject pit;
+    public GameObject smell;
 
     Vector2 movement;
 
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)) {
             GameObject new_pit = Instantiate(pit, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as GameObject;
+        }
+
+        if(Input.GetKeyDown(KeyCode.R)) {
+            Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
         }
 
     }
