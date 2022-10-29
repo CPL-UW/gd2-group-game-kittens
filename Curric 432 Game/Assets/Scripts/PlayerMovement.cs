@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
+    public Animator animator;
 
     public GameObject pit;
     public GameObject smell;
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
         if(Input.GetKeyDown(KeyCode.Space)) {
             GameObject new_pit = Instantiate(pit, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as GameObject;
