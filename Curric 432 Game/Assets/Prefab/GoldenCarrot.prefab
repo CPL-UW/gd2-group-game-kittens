@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canCollect: 0
   rb: {fileID: -9175331001202225020}
-  shine: {fileID: 6316681447152261769, guid: 339c5f6cce047a8488cc9c197c8f3edc, type: 3}
+  shine: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
 --- !u!50 &-9175331001202225020
 Rigidbody2D:
   serializedVersion: 4

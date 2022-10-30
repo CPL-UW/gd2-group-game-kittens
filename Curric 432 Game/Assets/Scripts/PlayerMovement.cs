@@ -15,17 +15,62 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    // Update is called once per frame
+    //Variables needed to have a cooldown for dig function
+    public float digProgress;
+    public float digMaxProgress;
+    bool digHeld;
+    public digProgressBar digBar;
+
+    void Start() {
+        digBar.SetMaxValue(digMaxProgress);
+        digBar.SetValue(0);
+    }
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Speed", Mathf.Abs(movement.x));
-
+        animator.SetFloat("SpeedX", Mathf.Abs(movement.x));
+        animator.SetFloat("SpeedY", Mathf.Abs(movement.y));
+        
+        // Old Dig
+        /*
         if(Input.GetKeyDown(KeyCode.Space)) {
+            animator.Play("Rabbit_Dig");
             GameObject new_pit = Instantiate(pit, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as GameObject;
         }
+        */
+
+        //Dig but you hold the button down
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            digHeld = true;
+            
+        }
+
+        if(Input.GetKeyUp(KeyCode.Space)) {
+            digHeld = false;
+            digProgress = 0;
+            digBar.SetValue(0);
+        }
+
+        if(digHeld) {
+            digProgress += Time.deltaTime;
+            digBar.SetValue(digProgress);
+            //Prevents Player from moving while digging
+            movement.x = 0;
+            movement.y = 0;
+            //Debug.Log(digProgress);
+        }
+
+        if(digProgress > digMaxProgress) {
+            animator.Play("Rabbit_Dig");
+            GameObject new_pit = Instantiate(pit, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as GameObject;
+            digHeld = false;
+            digProgress = 0;
+            digBar.SetValue(0);
+        }
+
 
         if(Input.GetKeyDown(KeyCode.R)) {
             Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
