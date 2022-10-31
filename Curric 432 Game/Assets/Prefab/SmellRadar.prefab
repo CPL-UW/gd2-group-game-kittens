@@ -48,7 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8042289a9b6cd224583da517e5767ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2353856671592941309, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
   smell: {fileID: 7531409182526980259}
+  rb: {fileID: -7120360444597964174}
   lifeTime: 3
 --- !u!50 &-7120360444597964174
 Rigidbody2D:

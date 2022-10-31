@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject pit;
     public GameObject smell;
+    public Transform playerTransform;
 
     Vector2 movement;
 
@@ -21,9 +22,16 @@ public class PlayerMovement : MonoBehaviour
     bool digHeld;
     public digProgressBar digBar;
 
+    public float smellProgress;
+    public float smellMaxProgress;
+    public digProgressBar smellBar;
+
     void Start() {
         digBar.SetMaxValue(digMaxProgress);
         digBar.SetValue(0);
+
+        smellBar.SetMaxValue(smellMaxProgress);
+        smellBar.SetValue(0);
     }
 
     void Update()
@@ -71,9 +79,16 @@ public class PlayerMovement : MonoBehaviour
             digBar.SetValue(0);
         }
 
+        smellBar.SetValue(smellProgress);
+        smellProgress += Time.deltaTime;
+        
 
-        if(Input.GetKeyDown(KeyCode.R)) {
+        if(Input.GetKeyDown(KeyCode.R) && smellProgress > smellMaxProgress) {
+            smellProgress = 0;
+            smellBar.SetValue(smellProgress);
             Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
+            //Debug.Log(playerTransform);
+            //Instantiate(smell, transform, false);
         }
 
     }
