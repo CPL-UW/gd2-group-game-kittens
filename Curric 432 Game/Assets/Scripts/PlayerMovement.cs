@@ -6,9 +6,11 @@ using System;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public int points;
 
     public Rigidbody2D rb;
     public Animator animator;
+    SpriteRenderer playerSprite;
 
     public GameObject pit;
     public GameObject smell;
@@ -32,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
         smellBar.SetMaxValue(smellMaxProgress);
         smellBar.SetValue(0);
+
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -42,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("SpeedX", Mathf.Abs(movement.x));
         animator.SetFloat("SpeedY", Mathf.Abs(movement.y));
         
+        if(movement.x < 0) {
+            playerSprite.flipX = false;
+        } else {
+            playerSprite.flipX = true;
+        }
+
         // Old Dig
         /*
         if(Input.GetKeyDown(KeyCode.Space)) {
@@ -91,6 +101,12 @@ public class PlayerMovement : MonoBehaviour
             //Instantiate(smell, transform, false);
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.CompareTag("Carrot")) {
+            points++;
+        }
     }
 
     void FixedUpdate()
