@@ -9920,6 +9920,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
+      propertyPath: pit
+      value: 
+      objectReference: {fileID: 2170919560733957273, guid: a9233aab9945ee94e80e9796c8a1de7f, type: 3}
+    - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: digBar
       value: 
       objectReference: {fileID: 1631458425}

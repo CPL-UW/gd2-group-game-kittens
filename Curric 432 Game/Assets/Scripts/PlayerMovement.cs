@@ -26,12 +26,17 @@ public class PlayerMovement : MonoBehaviour
     public float smellMaxProgress;
     public digProgressBar smellBar;
 
+    private bool collision;
+    private new Collider2D collider;
+
     void Start() {
         digBar.SetMaxValue(digMaxProgress);
         digBar.SetValue(0);
 
         smellBar.SetMaxValue(smellMaxProgress);
         smellBar.SetValue(0);
+
+        collision = false;
     }
 
     void Update()
@@ -52,7 +57,15 @@ public class PlayerMovement : MonoBehaviour
 
         //Dig but you hold the button down
         if(Input.GetKeyDown(KeyCode.Space)) {
-            digHeld = true;
+            if (collider != null && collider.gameObject != null && collision)
+            {
+                Destroy(collider.gameObject);
+                collision = false;
+            }
+            else
+            {
+                digHeld = true;
+            }
             
         }
 
@@ -63,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(digHeld) {
-            digProgress += Time.deltaTime;
+            digProgress += Time.deltaTime*3;
             digBar.SetValue(digProgress);
             //Prevents Player from moving while digging
             movement.x = 0;
@@ -91,6 +104,26 @@ public class PlayerMovement : MonoBehaviour
             //Instantiate(smell, transform, false);
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Pit Variant" || other.gameObject.name == "Pit Variant(Clone)")
+        {
+            collision = true;
+            collider = other;
+
+        }
+        else
+        {
+            collision = false;
+        }
+
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        collision = false;
     }
 
     void FixedUpdate()

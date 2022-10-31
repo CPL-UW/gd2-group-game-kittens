@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pit : MonoBehaviour
 {
-    int lifeTime = 5;
+    int lifeTime = 7;
     public void Start()
     {
         StartCoroutine(WaitThenDie());
