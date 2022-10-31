@@ -56,7 +56,6 @@ public class SpamMove: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("trigger enter");
         if(other.gameObject.name == "Pit Variant" || other.gameObject.name == "Pit Variant(Clone)")
         {
             collision = true;
@@ -72,7 +71,6 @@ public class SpamMove: MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("trigger exit");
         collision = false;
     }
 
