@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.gameObject.CompareTag("Carrot")) {
+        if(other.gameObject.CompareTag("Carrot")) {
             points++;
         }
         
