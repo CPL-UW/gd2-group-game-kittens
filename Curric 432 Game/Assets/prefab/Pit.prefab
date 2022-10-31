@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1487756899234492228}
+  - component: {fileID: -6548974778749146165}
   - component: {fileID: 1487756899234492229}
   - component: {fileID: 1487756899234492231}
   - component: {fileID: 1487756899234492230}
-  - component: {fileID: 1487756899234492225}
   m_Layer: 0
   m_Name: Pit
   m_TagString: Pit
@@ -35,6 +35,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6548974778749146165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487756899234492234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2589d29b59e564545b0e825072b8dce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1487756899234492234}
+  lifeTime: 2
 --- !u!212 &1487756899234492229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -124,15 +138,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &1487756899234492225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487756899234492234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8362b32b06308c949b6f5f61a9da5cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

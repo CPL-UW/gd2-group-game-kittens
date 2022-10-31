@@ -7867,16 +7867,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  points: 0
+  digSpeed: 0
   rb: {fileID: 627307953}
   animator: {fileID: 0}
   pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
   smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
-  playerTransform: {fileID: 0}
-  digProgress: 0
   digMaxProgress: 0
   digBar: {fileID: 0}
-  smellProgress: 0
   smellMaxProgress: 0
   smellBar: {fileID: 0}
 --- !u!50 &627307953
@@ -7912,6 +7909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bae677ff59efab47b49f4385222439d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCarrots: 0
 --- !u!58 &627307955
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8164,17 +8162,6 @@ Transform:
   m_Father: {fileID: 1573015688}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &781842804 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
-  m_PrefabInstance: {fileID: 2353856671328262074}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eab2bbbb3d1dd24fae1daa27a306cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &985004170
 GameObject:
   m_ObjectHideFlags: 0
@@ -8184,7 +8171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 985004172}
-  - component: {fileID: 985004171}
+  - component: {fileID: 985004173}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8192,20 +8179,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &985004171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985004170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda2f4b74389c2846893a52610016fdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carrot: {fileID: 5391805139046123574, guid: 417f5ebb42028b14f90746d97a7b5ec1, type: 3}
-  points: 0
 --- !u!4 &985004172
 Transform:
   m_ObjectHideFlags: 0
@@ -8221,6 +8194,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &985004173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985004170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43a0de290237ac4691fc564840a21ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carrot: {fileID: 5391805139046123574, guid: 417f5ebb42028b14f90746d97a7b5ec1, type: 3}
+  minX: -11
+  maxX: 11
+  minY: -7
+  maxY: 1
+  points: 0
 --- !u!1 &998729597
 GameObject:
   m_ObjectHideFlags: 0
@@ -8925,7 +8916,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 3.2
+  m_Value: 6.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10077,7 +10068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cdc43da237c84e4aaad400402e5194b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 781842804}
   scoreText: {fileID: 2041733077}
 --- !u!114 &2041733077
 MonoBehaviour:
@@ -10136,6 +10126,10 @@ PrefabInstance:
       propertyPath: digBar
       value: 
       objectReference: {fileID: 1631458425}
+    - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
+      propertyPath: digSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: smellBar
       value: 

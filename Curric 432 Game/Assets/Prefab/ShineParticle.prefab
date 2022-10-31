@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 718057313296180902}
   - component: {fileID: 184832107615080339}
   - component: {fileID: 2654834544677570841}
+  - component: {fileID: -9098341566400420072}
   m_Layer: 0
   m_Name: ShineParticle
   m_TagString: Untagged
@@ -4812,3 +4813,17 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-9098341566400420072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688068099401591815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2589d29b59e564545b0e825072b8dce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 688068099401591815}
+  lifeTime: 2

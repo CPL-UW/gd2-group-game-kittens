@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Script for Score UI
+*/
 public class Score : MonoBehaviour
 {
-    public PlayerMovement player;
+    //public PlayerMovement player;
     //public Carrot points
-    public Text scoreText;
-    // Start is called before the first frame update
+    public Text scoreText; //Text object with text
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    //Updates text
     void Update()
     {
-        scoreText.text = player.points.ToString();
+        //scoreText.text = player.points.ToString();
     }
 }

@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2353856671592941303}
-  - component: {fileID: 2353856671592941302}
-  - component: {fileID: 2353856671592941297}
   - component: {fileID: 2353856671592941296}
   - component: {fileID: 2353856671592941299}
+  - component: {fileID: 2353856671592941302}
+  - component: {fileID: 2353856671592941297}
   - component: {fileID: 2353856671592941298}
   - component: {fileID: 2353856671592941300}
   m_Layer: 0
@@ -37,6 +37,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2353856671592941296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353856671592941309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eab2bbbb3d1dd24fae1daa27a306cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  digSpeed: 0
+  rb: {fileID: 2353856671592941297}
+  animator: {fileID: 2353856671592941300}
+  pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
+  smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
+  digMaxProgress: 2
+  digBar: {fileID: 0}
+  smellMaxProgress: 2
+  smellBar: {fileID: 0}
+--- !u!114 &2353856671592941299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353856671592941309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bae677ff59efab47b49f4385222439d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &2353856671592941302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -110,42 +144,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2353856671592941296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2353856671592941309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eab2bbbb3d1dd24fae1daa27a306cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 2353856671592941297}
-  animator: {fileID: 2353856671592941300}
-  pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
-  smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
-  playerTransform: {fileID: 2353856671592941303}
-  digProgress: 0
-  digMaxProgress: 2
-  digBar: {fileID: 0}
-  smellProgress: 0
-  smellMaxProgress: 2
-  smellBar: {fileID: 0}
---- !u!114 &2353856671592941299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2353856671592941309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bae677ff59efab47b49f4385222439d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &2353856671592941298
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Progress Bar code
+*/
 public class digProgressBar : MonoBehaviour
 {
 
