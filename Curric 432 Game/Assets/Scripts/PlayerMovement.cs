@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Dig but you hold the button down
         if(Input.GetKeyDown(KeyCode.Space)) {
+            // destroy existing pits if collide
             if (collider != null && collider.gameObject != null && collision)
             {
                 Destroy(collider.gameObject);
@@ -120,12 +121,12 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.CompareTag("Carrot")) {
             points++;
         }
-        
+
+        // Check if collide with pits
         if (other.gameObject.name == "Pit Variant" || other.gameObject.name == "Pit Variant(Clone)")
         {
             collision = true;
             collider = other;
-
         }
         else
         {
