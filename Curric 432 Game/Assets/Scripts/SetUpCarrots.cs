@@ -8,6 +8,9 @@ public class SetUpCarrots : MonoBehaviour
 
     public GameObject carrot;
 
+    //Unused
+    public int points;
+
     void Start()
     {
         for(int i = 0; i < 10; i++)
@@ -26,5 +29,9 @@ public class SetUpCarrots : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddPoint() {
+        points++;
     }
 }

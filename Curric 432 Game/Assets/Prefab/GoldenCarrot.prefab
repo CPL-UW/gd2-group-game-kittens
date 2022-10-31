@@ -203,6 +203,7 @@ MonoBehaviour:
   canCollect: 0
   rb: {fileID: -9175331001202225020}
   shine: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
+  player: {fileID: 2353856671592941309, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
 --- !u!50 &-9175331001202225020
 Rigidbody2D:
   serializedVersion: 4

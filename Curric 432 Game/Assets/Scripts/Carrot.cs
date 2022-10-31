@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Carrot : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class Carrot : MonoBehaviour
     SpriteRenderer renderer;
     public Rigidbody2D rb;
 
+    //public SetUpCarrots player;
     public GameObject shine;
+    //public Text scoreText;
 
     void Start() {
         renderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -30,6 +33,8 @@ public class Carrot : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && canCollect) {
             Destroy(this.gameObject);
             //playerCarrots++;
+            //SetUpCarrots.instance.AddPoint();
+            //player.Points++;
             Debug.Log("Carrots/Points: +1");
         }
     }
