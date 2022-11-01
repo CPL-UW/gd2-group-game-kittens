@@ -8,7 +8,7 @@ using UnityEngine;
 public class Despawn : MonoBehaviour
 {
     public GameObject obj; //Object to despawn
-    public int lifeTime; //Amount of to before despawning
+    public float lifeTime; //Amount of time before despawning
 
     void Start()
     {
