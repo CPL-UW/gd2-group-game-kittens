@@ -15090,7 +15090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0223ce8557662014192164443a7c5f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 2.5
 --- !u!50 &539494238
 Rigidbody2D:
   serializedVersion: 4
@@ -17707,7 +17707,7 @@ PrefabInstance:
       objectReference: {fileID: 1631458425}
     - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: digSpeed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: smellBar

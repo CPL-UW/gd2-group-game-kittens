@@ -6,7 +6,7 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _speed = 0.25f;
+    [SerializeField] private float _speed = 0.125f;
     Rigidbody2D rb;
     Transform target;
     Vector2 moveDirection;
