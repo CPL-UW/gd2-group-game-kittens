@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eab2bbbb3d1dd24fae1daa27a306cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  digSpeed: 0
+  moveSpeed: 6
+  digSpeed: 100
   rb: {fileID: 2353856671592941297}
   animator: {fileID: 2353856671592941300}
   pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bae677ff59efab47b49f4385222439d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCarrots: 0
 --- !u!212 &2353856671592941302
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6548974778749146165, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
+      propertyPath: lifeTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1487756899234492228, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -51,9 +55,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1487756899234492229, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
       propertyPath: m_Name
-      value: Pit
+      value: Pit Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
