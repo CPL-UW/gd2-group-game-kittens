@@ -11,6 +11,9 @@ public class Score : MonoBehaviour
     //public PlayerMovement player;
     //public Carrot points
     public Text scoreText; //Text object with text
+    public ItemCollect items;
+    public int carrots;
+    public GameManager gameManager;
     void Start()
     {
         
@@ -19,6 +22,7 @@ public class Score : MonoBehaviour
     //Updates text
     void Update()
     {
-        //scoreText.text = player.points.ToString();
+        //scoreText.text = items.playerCarrots.ToString();
+        //scoreText.text = gameManager.points.ToString();
     }
 }

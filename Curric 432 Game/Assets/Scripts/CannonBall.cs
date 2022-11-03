@@ -11,7 +11,7 @@ public class CannonBall : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D collision;
 
-    public float power;
+    public float power; //Default is 7
 
     public float Y;
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class CannonBall : MonoBehaviour
     {
         //startY = getCurrentY;
         startY = rb.position.y;
+        power = Random.Range(3, 10);
         rb.AddForce(new Vector3(1, 1, 0) * power, ForceMode2D.Impulse);
     }
 

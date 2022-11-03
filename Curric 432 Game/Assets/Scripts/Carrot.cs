@@ -17,6 +17,7 @@ public class Carrot : MonoBehaviour
 
     //Other objects
     public GameObject shine; //Object to create when carrot is revealed
+    public Score score; //Unused
 
     void Start() {
         //By default, carrot sprite isn't rendered

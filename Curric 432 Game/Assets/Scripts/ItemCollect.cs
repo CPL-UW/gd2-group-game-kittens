@@ -7,13 +7,13 @@ using UnityEngine;
 */
 public class ItemCollect : MonoBehaviour
 {
-    public int playerCarrots = 0; //Unused
+    public int playerCarrots; //Unused
 
     //public Carrot carrot;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         
-        //When player collides with a carrot, they collect the carrot
+        //Unused
         if(collision.gameObject.CompareTag("Carrot") && false) {
             Destroy(collision.gameObject);
             playerCarrots++;
