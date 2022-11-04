@@ -19048,6 +19048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483849590}
+  - component: {fileID: 483849591}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -19070,6 +19071,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483849591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483849589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d3ea3629e345a4b8e3183bbdec2a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
 --- !u!1 &491657456
 GameObject:
   m_ObjectHideFlags: 0
@@ -22560,7 +22574,7 @@ GameObject:
   - component: {fileID: 539494238}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22962,6 +22976,7 @@ MonoBehaviour:
   moveSpeed: 5
   digSpeed: 0
   smellSpeed: 0
+  hearts: 0
   rb: {fileID: 627307953}
   animator: {fileID: 0}
   pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3414311134594972136}
   m_Layer: 0
   m_Name: Blast
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

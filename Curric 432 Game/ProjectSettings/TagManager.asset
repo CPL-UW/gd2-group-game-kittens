@@ -7,6 +7,7 @@ TagManager:
   - Carrot
   - Pit
   - Radar
+  - Damage
   layers:
   - Default
   - TransparentFX

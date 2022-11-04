@@ -51,10 +51,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   digSpeed: 100
+  smellSpeed: 0
+  hearts: 5
   rb: {fileID: 2353856671592941297}
   animator: {fileID: 2353856671592941300}
   pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
   smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
+  GM: {fileID: 0}
   digMaxProgress: 2
   digBar: {fileID: 0}
   smellMaxProgress: 2

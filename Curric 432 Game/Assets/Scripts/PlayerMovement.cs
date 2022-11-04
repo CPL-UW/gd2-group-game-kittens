@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float digSpeed;
     public float smellSpeed;
+    public int hearts;
 
     //Components
     public Rigidbody2D rb;
@@ -150,6 +151,10 @@ public class PlayerMovement : MonoBehaviour
             if(renderer.enabled) {
                 GM.AddPoint();
             }
+        }
+
+        if(other.gameObject.CompareTag("Damage")) {
+            hearts--;
         }
         
 
