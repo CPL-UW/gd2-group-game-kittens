@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int maxY; //Max Y to spawn (default 1)
 
     //Unused
+    [SerializeField]
     public int points;
 
     void Start()

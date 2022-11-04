@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
 {
     //Character Attributes
     public float moveSpeed;
-    //public int points; //Unused
-    public int digSpeed;
+    public float digSpeed;
+    public float smellSpeed;
 
     //Components
     public Rigidbody2D rb;
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     //Other GameObjects
     public GameObject pit;
     public GameObject smell;
+    public GameManager GM;
 
     //Variables
     Vector2 movement;
@@ -126,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Fills up progress bar
         smellBar.SetValue(smellProgress);
-        smellProgress += Time.deltaTime;
+        smellProgress += Time.deltaTime * smellSpeed;
         
 
         //If key is pressed and progress bar is above certain threshold, player is able to smell
@@ -142,11 +143,15 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        /*
+        
+        //Adds points to player
         if(other.gameObject.CompareTag("Carrot")) {
-            points++;
+            SpriteRenderer renderer = other.gameObject.GetComponent<SpriteRenderer>();
+            if(renderer.enabled) {
+                GM.AddPoint();
+            }
         }
-        */
+        
 
         // Check if collide with pits
         if (other.gameObject.name == "Pit Variant" || other.gameObject.name == "Pit Variant(Clone)")

@@ -4166,7 +4166,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271220230
 GameObject:
@@ -18956,7 +18956,7 @@ RectTransform:
   - {fileID: 642600849}
   - {fileID: 2064172522}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19039,6 +19039,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385489108}
   m_CullTransparentMesh: 1
+--- !u!1 &483849589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483849590}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483849590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483849589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9306648, y: -1.7647179, z: -3.0087397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491657456
 GameObject:
   m_ObjectHideFlags: 0
@@ -22377,7 +22408,7 @@ Transform:
   - {fileID: 276726820}
   - {fileID: 1564909149}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -22615,7 +22646,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &539494237
 MonoBehaviour:
@@ -22728,7 +22759,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -756727387
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &603557408
@@ -22930,10 +22961,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   digSpeed: 0
+  smellSpeed: 0
   rb: {fileID: 627307953}
   animator: {fileID: 0}
   pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
   smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
+  GM: {fileID: 0}
   digMaxProgress: 0
   digBar: {fileID: 0}
   smellMaxProgress: 0
@@ -23492,7 +23525,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &985004170
 GameObject:
@@ -23524,7 +23557,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &985004173
 MonoBehaviour:
@@ -23805,7 +23838,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1255781245
 BoxCollider2D:
@@ -24231,7 +24264,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -756727387
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1492469316
@@ -24419,7 +24452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543408458
 GameObject:
@@ -26123,7 +26156,7 @@ Transform:
   - {fileID: 1888783969}
   - {fileID: 1543408460}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1631458423
 GameObject:
@@ -27467,7 +27500,7 @@ MonoBehaviour:
   scoreText: {fileID: 2041733077}
   items: {fileID: 1777906608}
   carrots: 0
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 985004173}
 --- !u!114 &2041733077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27598,6 +27631,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 985004173}
+    - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: pit
       value: 
       objectReference: {fileID: 2170919560733957273, guid: a9233aab9945ee94e80e9796c8a1de7f, type: 3}
@@ -27614,6 +27651,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1492469316}
     - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
+      propertyPath: smellSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353856671592941296, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: digMaxProgress
       value: 0.5
       objectReference: {fileID: 0}
@@ -27623,7 +27664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2353856671592941303, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2353856671592941303, guid: f9e33aff7d16dc24f960942b649ea1e1, type: 3}
       propertyPath: m_LocalPosition.x

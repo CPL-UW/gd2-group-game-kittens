@@ -23,6 +23,6 @@ public class Score : MonoBehaviour
     void Update()
     {
         //scoreText.text = items.playerCarrots.ToString();
-        //scoreText.text = gameManager.points.ToString();
+        scoreText.text = gameManager.points.ToString();
     }
 }
