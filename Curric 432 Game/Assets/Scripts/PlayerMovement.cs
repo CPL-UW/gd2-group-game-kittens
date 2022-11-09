@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pit;
     public GameObject smell;
     public GameManager GM;
+    public Heart heart;
 
     //Variables
     Vector2 movement;
@@ -154,7 +155,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(other.gameObject.CompareTag("Damage")) {
-            hearts--;
+            //hearts--;
+            heart.playerHealth--;
+            heart.UpdateHearts();
+            Debug.Log(heart.playerHealth);
         }
         
 
