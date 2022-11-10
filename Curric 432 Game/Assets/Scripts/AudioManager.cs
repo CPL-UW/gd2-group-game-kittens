@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
         //Play("Theme");
     }
 
-    void Play(string name) {
+    public void Play(string name) {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) {
             Debug.Log("No sound found");

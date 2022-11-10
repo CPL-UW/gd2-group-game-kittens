@@ -104,6 +104,8 @@ public class PlayerMovement : MonoBehaviour
         //Sets digHeld to false when key is lifted up
         //Also resets progress
         if(Input.GetKeyUp(KeyCode.Space)) {
+            //FindObjectOfType<AudioManager>().Play("SandSound");
+
             digHeld = false;
             digProgress = 0;
             digBar.SetValue(0);
@@ -137,6 +139,8 @@ public class PlayerMovement : MonoBehaviour
             smellProgress = 0;
             smellBar.SetValue(smellProgress);
             Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
+            
+            //FindObjectOfType<AudioManager>().Play("SmellSound");
             //Debug.Log(playerTransform);
             //Instantiate(smell, transform, false);
         }
@@ -158,6 +162,9 @@ public class PlayerMovement : MonoBehaviour
             //hearts--;
             heart.playerHealth--;
             heart.UpdateHearts();
+
+            //FindObjectOfType<AudioManager>().Play("DamageSound");
+
             Debug.Log(heart.playerHealth);
         }
         
