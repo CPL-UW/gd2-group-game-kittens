@@ -31,13 +31,13 @@ public class PlayerMovement : MonoBehaviour
 
     //Variables needed to have a delay for dig function
     float digProgress = 0;
-    public float digMaxProgress; //Determine how long the space bar should be held
+    float digMaxProgress = 2; //Determine how long the space bar should be held
     bool digHeld;
     public digProgressBar digBar;
 
     //Variables needed for smell cooldown
     float smellProgress = 0;
-    public float smellMaxProgress; //Determines how long before player can smell again
+    float smellMaxProgress = 2; //Determines how long before player can smell again
     public digProgressBar smellBar;
 
     // ??
@@ -71,18 +71,10 @@ public class PlayerMovement : MonoBehaviour
         
         //Flips sprite based on direction
         if(movement.x < 0) {
-            playerSprite.flipX = false;
-        } else {
             playerSprite.flipX = true;
+        } else {
+            playerSprite.flipX = false;
         }
-
-        // Old Dig
-        /*
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            animator.Play("Rabbit_Dig");
-            GameObject new_pit = Instantiate(pit, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as GameObject;
-        }
-        */
 
         //Dig Function
 
@@ -141,8 +133,6 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
             
             //FindObjectOfType<AudioManager>().Play("SmellSound");
-            //Debug.Log(playerTransform);
-            //Instantiate(smell, transform, false);
         }
 
     }
@@ -159,7 +149,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(other.gameObject.CompareTag("Damage")) {
-            //hearts--;
             heart.playerHealth--;
             heart.UpdateHearts();
 

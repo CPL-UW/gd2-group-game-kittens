@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2353856671592941303}
   - component: {fileID: 2353856671592941296}
-  - component: {fileID: 2353856671592941299}
   - component: {fileID: 2353856671592941302}
   - component: {fileID: 2353856671592941297}
   - component: {fileID: 2353856671592941298}
@@ -58,23 +57,9 @@ MonoBehaviour:
   pit: {fileID: 1487756899234492234, guid: ecf4ca107ba683a418cd61459ad79185, type: 3}
   smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
   GM: {fileID: 0}
-  digMaxProgress: 2
+  heart: {fileID: 0}
   digBar: {fileID: 0}
-  smellMaxProgress: 2
   smellBar: {fileID: 0}
---- !u!114 &2353856671592941299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2353856671592941309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bae677ff59efab47b49f4385222439d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCarrots: 0
 --- !u!212 &2353856671592941302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -118,7 +103,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 52da5d2805dd83e40a91dc60a227bb2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

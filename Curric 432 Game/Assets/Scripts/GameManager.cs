@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public PlayerMovement player;
 
     public GameObject heart;
-    //Vector3 hpLocation = new Vector3();
     public GameObject[] hearts;
     
     [SerializeField]
@@ -33,10 +32,6 @@ public class GameManager : MonoBehaviour
             //Default spawns from -11 to 11, 1 to -7
             Instantiate(carrot, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), transform.rotation);
         }
-
-        for(int i = 0; i < player.hearts; i++) {
-            //hearts[i] = Instantiate(heart, new Vector3());
-        }
         
     }
 
@@ -49,14 +44,6 @@ public class GameManager : MonoBehaviour
     
     public void AddPoint() {
         points++;
-    }
-
-    public void RemoveHeart() {
-        //Destroy last heart[]
-    }
-
-    public void AddHeart() {
-        //Add heart to heart[]
     }
 
 }

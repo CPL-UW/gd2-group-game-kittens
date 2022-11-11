@@ -17,8 +17,6 @@ public class Carrot : MonoBehaviour
 
     //Other objects
     public GameObject shine; //Object to create when carrot is revealed
-    
-    //public GameManager GM;
 
     void Start() {
         //By default, carrot sprite isn't rendered
@@ -42,8 +40,6 @@ public class Carrot : MonoBehaviour
         //When carrot collides with player and is able to be collected, it destroys itself
         if(collision.gameObject.CompareTag("Player") && canCollect) {
             Destroy(this.gameObject);
-            Debug.Log("Carrots/Points: +1");
-            //GM.AddPoint();
         }
     }
 }

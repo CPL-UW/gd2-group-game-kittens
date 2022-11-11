@@ -13,11 +13,9 @@ public class CannonBall : MonoBehaviour
 
     public float power; //Default is 7
 
-    public float Y;
     // Start is called before the first frame update
     void Start()
     {
-        //startY = getCurrentY;
         startY = rb.position.y;
         power = Random.Range(3, 10);
         rb.AddForce(new Vector3(1, 1, 0) * power, ForceMode2D.Impulse);
@@ -33,8 +31,6 @@ public class CannonBall : MonoBehaviour
             Debug.Log("Blast");
         }
         
-        //if(currentY < startY && collide w/Pit) destroy(this)
-        //if(currentY < startY) playAnimation(blast); destroy()
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -42,10 +38,5 @@ public class CannonBall : MonoBehaviour
             Debug.Log("Defuse");
             Destroy(obj);
         }
-
-        // if(collision.gameObject.CompareTag("Player")) {
-        //     Destroy(this.gameObject);
-        //     Debug.Log("Boom");
-        // }
     }
 }
