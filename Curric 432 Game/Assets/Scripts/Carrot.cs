@@ -28,6 +28,7 @@ public class Carrot : MonoBehaviour
         if(collision.gameObject.CompareTag("Pit")) {
             canCollect = true;
             renderer.enabled = true;
+            Instantiate(shine, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
             Debug.Log("Carrot can be collected");
         }
 
