@@ -8,6 +8,7 @@ TagManager:
   - Pit
   - Radar
   - Damage
+  - Player2
   layers:
   - Default
   - TransparentFX
