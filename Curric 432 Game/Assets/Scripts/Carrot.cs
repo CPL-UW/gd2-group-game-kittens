@@ -42,5 +42,8 @@ public class Carrot : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && canCollect) {
             Destroy(this.gameObject);
         }
+        if(collision.gameObject.CompareTag("Player2") && canCollect) {
+            Destroy(this.gameObject);
+        }
     }
 }

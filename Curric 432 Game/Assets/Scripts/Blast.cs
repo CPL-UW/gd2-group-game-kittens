@@ -21,6 +21,9 @@ public class Blast : MonoBehaviour
         if(collision.gameObject.CompareTag("Player")) {
             Debug.Log("Player has been hit");
         }
+        if(collision.gameObject.CompareTag("Player2")) {
+            Debug.Log("Player has been hit");
+        }
     }
 
 }
