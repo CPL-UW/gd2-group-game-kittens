@@ -24,11 +24,14 @@ public class GameManager : MonoBehaviour
     public GameObject FallingChest;
 
     public GameObject sparkles;
+
+    [SerializeField] private GameObject fence;
     
 
     void Start()
     {
         //SpawnCarrots();
+        SpawnFences();
     }
 
     // Update is called once per frame
@@ -63,6 +66,17 @@ public class GameManager : MonoBehaviour
 
             //Default spawns from -11 to 11, 1 to -7
             Instantiate(sparkles, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), transform.rotation);
+        }
+    }
+
+    public void SpawnFences() {
+        float randX = 0;
+        float randY = 0;
+        for(int i = 0; i < 5; i++)
+        {
+            randX = Mathf.Round(Random.Range(minX, maxX));
+            randY = Mathf.Round(Random.Range(minY, maxY));
+            Instantiate(fence, new Vector3(randX, randY, 0), transform.rotation);
         }
     }
 

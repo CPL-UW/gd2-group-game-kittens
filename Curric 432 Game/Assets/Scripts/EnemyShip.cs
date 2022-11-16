@@ -12,6 +12,7 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] float highestY;
     [SerializeField] float waitTime;
     [SerializeField] float fireChance;
+    
     // Start is called before the first frame update
     void Start()
     {
