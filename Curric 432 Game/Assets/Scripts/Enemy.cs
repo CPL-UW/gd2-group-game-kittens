@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using random = UnityEngine.Random;
 
 
 public class Enemy : MonoBehaviour
@@ -47,6 +46,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
+
         if (target != null)
         {
             Vector3 direction = (target.position - transform.position).normalized;
@@ -61,7 +61,6 @@ public class Enemy : MonoBehaviour
     {
 
         //Checks distance between enemy and target
-        
         distance = Vector2.Distance(player.position, transform.position);
         distance2 = Vector2.Distance(player2.position, transform.position);
 
@@ -70,6 +69,7 @@ public class Enemy : MonoBehaviour
         } else {
             target = player2;
         }
+
     rb.MovePosition((Vector2)transform.position + (moveDirection * _speed * Time.deltaTime));
     }
 }
