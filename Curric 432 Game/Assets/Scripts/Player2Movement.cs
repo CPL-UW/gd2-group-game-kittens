@@ -174,17 +174,17 @@ public class Player2Movement : MonoBehaviour
         if(other.gameObject.CompareTag("Carrot")) {
             SpriteRenderer renderer = other.gameObject.GetComponent<SpriteRenderer>();
             if(renderer.enabled) {
-                GM.AddPoint();
+                GM.AddPoint2();
             }
         }
 
         if(other.gameObject.CompareTag("Damage")) {
-            heart.playerHealth--;
+            heart.player2Health--;
             heart.UpdateHearts();
 
             //FindObjectOfType<AudioManager>().Play("DamageSound");
 
-            Debug.Log(heart.playerHealth);
+            Debug.Log(heart.player2Health);
         }
         
 

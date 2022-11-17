@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     //public PlayerMovement player; //unused
     
     public int points; //Points/Number of golden carrots collected
+    public int points2; //Points/Number of golden carrots collected
 
     public bool summonChest; //Whether a chest can spawn or not
     public GameObject FallingChest;
@@ -49,6 +50,10 @@ public class GameManager : MonoBehaviour
     //Add a point
     public void AddPoint() {
         points++;
+    }
+
+    public void AddPoint2() {
+        points2++;
     }
 
     //Randomly spawns golden carrots
