@@ -178,8 +178,8 @@ MonoBehaviour:
   animator: {fileID: 21625131}
   pit: {fileID: 2170919560733957273, guid: a9233aab9945ee94e80e9796c8a1de7f, type: 3}
   smell: {fileID: 7531409182526980259, guid: cf704fef48b71de4bbf97db6717d8333, type: 3}
-  GM: {fileID: 2113947397}
-  heart: {fileID: 2113947396}
+  GM: {fileID: 985004173}
+  heart: {fileID: 985004174}
   digBar: {fileID: 5511191}
   smellBar: {fileID: 1776184328}
 --- !u!4 &102211884 stripped
@@ -25411,7 +25411,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5786469637495485748, guid: 84a7b3db78e7f0949ba8848b0a6ced2e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 84a7b3db78e7f0949ba8848b0a6ced2e, type: 3}
 --- !u!1 &588151058
 GameObject:
@@ -35057,8 +35058,8 @@ MonoBehaviour:
   maxX: 15
   minY: -12
   maxY: 7
-  player: {fileID: 2353856671328262075}
   points: 0
+  points2: 0
   summonChest: 1
   FallingChest: {fileID: 3491151585598765335, guid: 87860a7a269a71e499600b0c06a8d98e, type: 3}
   sparkles: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
@@ -35076,10 +35077,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 3
+  player2Health: 3
   hearts:
   - {fileID: 1726312116}
   - {fileID: 346267383}
   - {fileID: 624033536}
+  P2hearts:
+  - {fileID: 993256806}
+  - {fileID: 679587140}
+  - {fileID: 852766395}
 --- !u!114 &993256806 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4321945523468519582, guid: 16ebafcf9851fd9468657b02c07de6d6, type: 3}
@@ -37715,7 +37721,6 @@ Transform:
   - {fileID: 1543408460}
   - {fileID: 1524751861}
   - {fileID: 1992189690}
-  - {fileID: 2113947398}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39074,91 +39079,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064172521}
   m_CullTransparentMesh: 1
---- !u!1 &2113947394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2113947398}
-  - component: {fileID: 2113947397}
-  - component: {fileID: 2113947396}
-  m_Layer: 0
-  m_Name: GameManager2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2113947396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113947394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f158708db49687141a5b5b77132945fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 3
-  hearts:
-  - {fileID: 993256806}
-  - {fileID: 679587140}
-  - {fileID: 852766395}
---- !u!114 &2113947397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113947394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43a0de290237ac4691fc564840a21ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carrot: {fileID: 5391805139046123574, guid: 417f5ebb42028b14f90746d97a7b5ec1, type: 3}
-  numCarrots: 10
-  minX: -15
-  maxX: 15
-  minY: -12
-  maxY: 7
-  player: {fileID: 2353856671328262075}
-  points: 0
-  summonChest: 1
-  FallingChest: {fileID: 3491151585598765335, guid: 87860a7a269a71e499600b0c06a8d98e, type: 3}
-  sparkles: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
-  fence: {fileID: 6158163632253525540, guid: 700bfac230808e141ae4cd0fd6157a94, type: 3}
---- !u!4 &2113947398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113947394}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1573015688}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2353856671328262075 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5786469637495485748, guid: 84a7b3db78e7f0949ba8848b0a6ced2e, type: 3}
-  m_PrefabInstance: {fileID: 5786469637223818366}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eab2bbbb3d1dd24fae1daa27a306cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4321945524088321950
 PrefabInstance:
   m_ObjectHideFlags: 0
