@@ -38,11 +38,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Summons a chest if a player obtains 10 points
-        if((points % 10 == 0) && summonChest) {
+        if(((points + points2) % 10 == 0) && summonChest) {
             Instantiate(FallingChest, new Vector3(0, 9, 0), transform.rotation);
             summonChest = false;
         }
-        if((points % 10 == 1) && !summonChest) {
+        if(((points + points2) % 10 == 1) && !summonChest) {
             summonChest = true;
         }
     }

@@ -14,6 +14,10 @@ public class Player2Movement : MonoBehaviour
     public KeyCode Moveleft;
     public KeyCode Moveright;
 
+    public KeyCode Digkey;
+    public KeyCode Smellkey;
+
+
     //Character Attributes
     public float moveSpeed;
     public float digSpeed;
@@ -109,7 +113,7 @@ public class Player2Movement : MonoBehaviour
         //Dig Function
 
         //Sets digHeld to true if key is pressed down
-        if(Input.GetKeyDown(KeyCode.Return)) {
+        if(Input.GetKeyDown(Digkey)) {
             // destroy existing pits if collide
             if (collider != null && collider.gameObject != null && collision)
             {
@@ -125,7 +129,7 @@ public class Player2Movement : MonoBehaviour
 
         //Sets digHeld to false when key is lifted up
         //Also resets progress
-        if(Input.GetKeyUp(KeyCode.Return)) {
+        if(Input.GetKeyUp(Digkey)) {
             //FindObjectOfType<AudioManager>().Play("SandSound");
 
             digHeld = false;
@@ -157,7 +161,7 @@ public class Player2Movement : MonoBehaviour
         
 
         //If key is pressed and progress bar is above certain threshold, player is able to smell
-        if(Input.GetKeyDown(KeyCode.O) && smellProgress > smellMaxProgress) {
+        if(Input.GetKeyDown(Smellkey) && smellProgress > smellMaxProgress) {
             smellProgress = 0;
             smellBar.SetValue(smellProgress);
             Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
