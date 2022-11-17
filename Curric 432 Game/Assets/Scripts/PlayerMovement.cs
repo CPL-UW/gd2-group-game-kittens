@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public float digSpeed;
     public float smellSpeed;
     public int hearts;
+    [SerializeField] private KeyCode DigKey;
+    [SerializeField] private KeyCode SmellKey;
 
     //Components
     public Rigidbody2D rb;
@@ -79,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         //Dig Function
 
         //Sets digHeld to true if key is pressed down
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if(Input.GetKeyDown(DigKey)) {
             // destroy existing pits if collide
             if (collider != null && collider.gameObject != null && collision)
             {
@@ -95,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Sets digHeld to false when key is lifted up
         //Also resets progress
-        if(Input.GetKeyUp(KeyCode.Space)) {
+        if(Input.GetKeyUp(DigKey)) {
             //FindObjectOfType<AudioManager>().Play("SandSound");
 
             digHeld = false;
@@ -127,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         
 
         //If key is pressed and progress bar is above certain threshold, player is able to smell
-        if(Input.GetKeyDown(KeyCode.R) && smellProgress > smellMaxProgress) {
+        if(Input.GetKeyDown(SmellKey) && smellProgress > smellMaxProgress) {
             smellProgress = 0;
             smellBar.SetValue(smellProgress);
             Instantiate(smell, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);

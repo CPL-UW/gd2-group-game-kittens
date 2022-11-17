@@ -12,7 +12,7 @@ public class Carrot : MonoBehaviour
     //Attributes
     bool canCollect = false;
     //Components
-    SpriteRenderer renderer;
+    private SpriteRenderer renderer;
     public Rigidbody2D rb;
 
     //Other objects

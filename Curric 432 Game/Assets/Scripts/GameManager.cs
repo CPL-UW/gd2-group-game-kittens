@@ -9,18 +9,17 @@ public class GameManager : MonoBehaviour
 {
     public GameObject carrot; //Carrots to spawn
     [SerializeField]
-    int numCarrots;
-    public int minX; //Min X to spawn (default -11)
-    public int maxX; //Max X to spawn (default 11)
-    public int minY; //Min Y to spawn (default -7)
-    public int maxY; //Max Y to spawn (default 1)
+    int numCarrots; //Number of carrots to spawn
+    public int minX; //Min X to randomly spawn (default was -11)
+    public int maxX; //Max X to randomly spawn (default was 11)
+    public int minY; //Min Y to randomly spawn (default was -7)
+    public int maxY; //Max Y to randomly spawn (default was 1)
 
-    public PlayerMovement player;
+    //public PlayerMovement player; //unused
     
-    [SerializeField]
-    public int points;
+    public int points; //Points/Number of golden carrots collected
 
-    public bool summonChest;
+    public bool summonChest; //Whether a chest can spawn or not
     public GameObject FallingChest;
 
     public GameObject sparkles;
@@ -37,6 +36,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Summons a chest if a player obtains 10 points
         if((points % 10 == 0) && summonChest) {
             Instantiate(FallingChest, new Vector3(0, 9, 0), transform.rotation);
             summonChest = false;
@@ -46,11 +46,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+    //Add a point
     public void AddPoint() {
         points++;
     }
 
+    //Randomly spawns golden carrots
     public void SpawnCarrots() {
         //Spawns carrots randomly between a range
         for(int i = 0; i < numCarrots; i++)
@@ -60,15 +61,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Randomly spawns sparkles
     public void SparkleScreen() {
         for(int i = 0; i < numCarrots; i++)
         {
-
-            //Default spawns from -11 to 11, 1 to -7
             Instantiate(sparkles, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), transform.rotation);
         }
     }
 
+    //Randomly spawn fences (walls)
     public void SpawnFences() {
         float randX = 0;
         float randY = 0;
