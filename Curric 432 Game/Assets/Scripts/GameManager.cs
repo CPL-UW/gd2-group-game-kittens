@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void SpawnFences() {
         float randX = 0;
         float randY = 0;
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 10; i++)
         {
             randX = Mathf.Round(Random.Range(minX, maxX));
             randY = Mathf.Round(Random.Range(minY, maxY));
