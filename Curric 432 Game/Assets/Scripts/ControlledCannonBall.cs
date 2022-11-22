@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonBallOther : MonoBehaviour
+public class ControlledCannonBall : MonoBehaviour
 {
     float startY;
     public GameObject obj;
@@ -11,18 +11,14 @@ public class CannonBallOther : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D collision;
 
-    public float power; //Default is 7
-
-    //This cannon ball fires towards the left
+    // Code for cannon balls from controllable ships
 
     // Start is called before the first frame update
     void Start()
     {
         startY = rb.position.y;
-        power = Random.Range(3, 10);
-        rb.AddForce(new Vector3(-1, 1, 0) * power, ForceMode2D.Impulse);
     }
-    
+
     // Update is called once per frame
     void Update()
     {

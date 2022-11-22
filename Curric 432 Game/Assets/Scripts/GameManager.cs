@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject sparkles;
 
     [SerializeField] private GameObject fence;
+    public int numFences;
     
 
     void Start()
@@ -78,8 +79,9 @@ public class GameManager : MonoBehaviour
     public void SpawnFences() {
         float randX = 0;
         float randY = 0;
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < numFences; i++)
         {
+
             randX = Mathf.Round(Random.Range(minX, maxX));
             randY = Mathf.Round(Random.Range(minY, maxY));
             Instantiate(fence, new Vector3(randX, randY, 0), transform.rotation);
