@@ -9,6 +9,7 @@ TagManager:
   - Radar
   - Damage
   - Player2
+  - Enemy
   layers:
   - Default
   - TransparentFX

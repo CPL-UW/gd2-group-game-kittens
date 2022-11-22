@@ -171,11 +171,20 @@ public class PlayerMovement : MonoBehaviour
             collision = false;
         }
 
+        if (other.gameObject.CompareTag("Enemy")){
+            // digSpeed = digSpeed/2;
+            digSpeed = 1;
+        }
+
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         collision = false;
+        if (other.gameObject.CompareTag("Enemy")){
+            // digSpeed = digSpeed*2;
+            digSpeed = 5;
+        }
     }
 
     //Updates players position (based on inputs) at a fixed rate
