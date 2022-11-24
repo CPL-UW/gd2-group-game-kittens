@@ -14,6 +14,11 @@ public class ControlledShip : MonoBehaviour
     float power;
     bool heldKey = false;
 
+    public bool isControlled;
+    public int defaultShots;
+    public int numShots;
+    //public GameObject dock;
+
     Rigidbody2D cannonball;
 
     [SerializeField] float chargeSpeed;
@@ -23,15 +28,19 @@ public class ControlledShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        numShots = defaultShots;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Need to add a cool down, a condition for the player to use, and a limit on amount of shots
+        // if(isControlled) {
+        //     numShots = defaultShots;
+        // }
 
-        if(Input.GetKeyDown(fireKey)) {
+
+        if(Input.GetKeyDown(fireKey) && isControlled && numShots > 0) {
             heldKey = true;
         }
 
@@ -46,14 +55,20 @@ public class ControlledShip : MonoBehaviour
         //     Bar.SetValue(0);
         // }
 
-        if(Input.GetKeyUp(fireKey)) { //Need to add another condition for when the player controls the ship
+        if(Input.GetKeyUp(fireKey) && isControlled && numShots > 0) { //Need to add another condition for when the player controls the ship
             heldKey = false;
+            numShots--;
 
             cannonball = Instantiate(cannon, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as Rigidbody2D;
             cannonball.AddForce(new Vector3(1, 1, 0) * 2 * progressBar, ForceMode2D.Impulse);
 
             progressBar = 0;
             Bar.SetValue(0);
+            Debug.Log(numShots + " shots left");
+        }
+
+        if(numShots == 0) {
+            isControlled = false;
         }
     }
 
@@ -65,5 +80,6 @@ public class ControlledShip : MonoBehaviour
         }
         rb.MovePosition(rb.position + new Vector2(0, -1* directionY) * Time.fixedDeltaTime);
     }
+
 
 }

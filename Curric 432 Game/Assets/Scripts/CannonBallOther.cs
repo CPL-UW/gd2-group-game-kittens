@@ -30,7 +30,7 @@ public class CannonBallOther : MonoBehaviour
         if(startY > rb.position.y && !(collision.gameObject.CompareTag("Pit"))) {
             Destroy(obj);
             Instantiate(blast, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
-            Debug.Log("Blast");
+            //Debug.Log("Blast");
         }
         
     }

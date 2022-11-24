@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int points; //Points/Number of golden carrots collected
     public int points2; //Points/Number of golden carrots collected
 
+
     public bool summonChest; //Whether a chest can spawn or not
     public GameObject FallingChest;
 
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject fence;
     public int numFences;
+
+    //public GameObject dock;
     
 
     void Start()
@@ -87,5 +90,6 @@ public class GameManager : MonoBehaviour
             Instantiate(fence, new Vector3(randX, randY, 0), transform.rotation);
         }
     }
+
 
 }
