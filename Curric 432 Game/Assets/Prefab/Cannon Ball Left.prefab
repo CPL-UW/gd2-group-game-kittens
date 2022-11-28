@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8317579915743716293}
-  - component: {fileID: 3734762188503254182}
+  - component: {fileID: -4911617176541313187}
   - component: {fileID: 8317579915743716292}
   - component: {fileID: 8317579915743716291}
   - component: {fileID: 2620874899129833627}
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3734762188503254182
+--- !u!114 &-4911617176541313187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,14 +44,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8317579915743716294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045f40ca2c937dd46bcf1159f8e782f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 600c237cccad46949a87311181ad34b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 8317579915743716294}
   blast: {fileID: 2169924705264264374, guid: 2aa930064a0c24549ac8786394fa1670, type: 3}
   rb: {fileID: 8317579915743716291}
   collision: {fileID: 2620874899129833627}
-  power: 15
+  minPower: 3
+  maxPower: 10
+  aimLeft: 1
 --- !u!212 &8317579915743716292
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class Blast : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         //When carrot collides with a pit, carrot can be collected and is rendered
         if(collision.gameObject.CompareTag("Player")) {
@@ -25,5 +13,4 @@ public class Blast : MonoBehaviour
             Debug.Log("Player has been hit");
         }
     }
-
 }

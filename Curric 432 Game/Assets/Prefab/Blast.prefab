@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5697329291135683789}
   - component: {fileID: 7349832326263766840}
   - component: {fileID: 5886354045839121153}
-  - component: {fileID: -3414311134594972136}
   m_Layer: 0
   m_Name: Blast
   m_TagString: Damage
@@ -138,15 +137,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-3414311134594972136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2169924705264264374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670b76547a5169949afd33fa21a5f03f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

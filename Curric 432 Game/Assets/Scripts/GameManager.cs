@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     public int maxX; //Max X to randomly spawn (default was 11)
     public int minY; //Min Y to randomly spawn (default was -7)
     public int maxY; //Max Y to randomly spawn (default was 1)
-
-    //public PlayerMovement player; //unused
     
     public int points; //Points/Number of golden carrots collected
     public int points2; //Points/Number of golden carrots collected
@@ -40,8 +38,6 @@ public class GameManager : MonoBehaviour
     {
         //SpawnCarrots();
         SpawnFences();
-
-        //Debug.Log(healthManager.playerHealth + " " + healthManager.player2Health);
     }
 
     // Update is called once per frame
@@ -55,6 +51,8 @@ public class GameManager : MonoBehaviour
         if(((points + points2) % 10 == 1) && !summonChest) {
             summonChest = true;
         }
+
+        //Moves player offscreen if 0 health
         if(healthManager.playerHealth <= 0) {
             player1.transform.position = tempLocation.transform.position;
         }
@@ -62,6 +60,7 @@ public class GameManager : MonoBehaviour
             player2.transform.position = tempLocation.transform.position;
         }
 
+        //Changes scene to end screen if both players are at 0 health
         if(healthManager.playerHealth <= 0 && healthManager.player2Health <= 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
@@ -100,7 +99,6 @@ public class GameManager : MonoBehaviour
         float randY = 0;
         for(int i = 0; i < numFences; i++)
         {
-
             randX = Mathf.Round(Random.Range(minX, maxX));
             randY = Mathf.Round(Random.Range(minY, maxY));
             Instantiate(fence, new Vector3(randX, randY, 0), transform.rotation);

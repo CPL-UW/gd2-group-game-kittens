@@ -51,8 +51,9 @@ MonoBehaviour:
   blast: {fileID: 2169924705264264374, guid: 2aa930064a0c24549ac8786394fa1670, type: 3}
   rb: {fileID: 3403933510074262972}
   collision: {fileID: -571958841595748636}
-  power: 15
-  Y: 0
+  minPower: 3
+  maxPower: 7
+  aimLeft: 0
 --- !u!212 &3403933510074262971
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -34,12 +34,6 @@ public class ControlledShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Need to add a cool down, a condition for the player to use, and a limit on amount of shots
-        // if(isControlled) {
-        //     numShots = defaultShots;
-        // }
-
-
         if(Input.GetKeyDown(fireKey) && isControlled && numShots > 0) {
             heldKey = true;
         }
@@ -49,13 +43,7 @@ public class ControlledShip : MonoBehaviour
             Bar.SetValue(progressBar);
         }
 
-        // if(Input.GetKeyUp(fireKey)) {
-        //     heldKey = false;
-        //     progressBar = 0;
-        //     Bar.SetValue(0);
-        // }
-
-        if(Input.GetKeyUp(fireKey) && isControlled && numShots > 0) { //Need to add another condition for when the player controls the ship
+        if(Input.GetKeyUp(fireKey) && isControlled && numShots > 0) {
             heldKey = false;
             numShots--;
 
@@ -70,10 +58,6 @@ public class ControlledShip : MonoBehaviour
                 isControlled = false;
             }
         }
-
-        //if(numShots == 0) {
-        //    isControlled = false;
-        //}
     }
 
     void FixedUpdate()

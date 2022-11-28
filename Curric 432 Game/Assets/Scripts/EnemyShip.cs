@@ -16,16 +16,6 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] float fireChance;
     float power;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Test to create cannon ball
-        //Instantiate(cannon, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
-
-
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -45,10 +35,7 @@ public class EnemyShip : MonoBehaviour
     IEnumerator fireShip() {
         yield return new WaitForSeconds(waitTime);
         if(Mathf.Round(Random.Range(0, fireChance)) == 1) {
-            //power = Random.Range(3, 10);
             Instantiate(cannon, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
-            //cannonInstance = Instantiate(cannon, new Vector2(rb.position.x, rb.position.y), transform.rotation) as Rigidbody2D;
-            //cannonInstance.AddForce(new Vector2(1, 1) * power, ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(waitTime);
     }

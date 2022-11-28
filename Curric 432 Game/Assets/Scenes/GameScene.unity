@@ -21815,7 +21815,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d3ea3629e345a4b8e3183bbdec2a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 84a991e94a6389148af9721387226c95, type: 3}
+    volume: 0.161
+    pitch: 0.29
+    loop: 0
+    source: {fileID: 0}
+  - name: DigSound
+    clip: {fileID: 8300000, guid: e8ce5acbc9a08fa40b605c88f302cb2e, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FoundSound
+    clip: {fileID: 8300000, guid: 3b3ade74fbffa874bbd6726e680df880, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DamageSound
+    clip: {fileID: 8300000, guid: 05cbe41e66c8b384dbfeaf9ea46006ed, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &491657456
 GameObject:
   m_ObjectHideFlags: 0
