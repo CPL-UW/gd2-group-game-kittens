@@ -17,7 +17,7 @@ public class ControlledShip : MonoBehaviour
     public bool isControlled;
     public int defaultShots;
     public int numShots;
-    //public GameObject dock;
+    [SerializeField] Dock dock;
 
     Rigidbody2D cannonball;
 
@@ -65,11 +65,15 @@ public class ControlledShip : MonoBehaviour
             progressBar = 0;
             Bar.SetValue(0);
             Debug.Log(numShots + " shots left");
+            if(numShots == 0) {
+                dock.bringPlayer();
+                isControlled = false;
+            }
         }
 
-        if(numShots == 0) {
-            isControlled = false;
-        }
+        //if(numShots == 0) {
+        //    isControlled = false;
+        //}
     }
 
     void FixedUpdate()

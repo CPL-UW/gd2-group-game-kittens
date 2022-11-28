@@ -8,20 +8,10 @@ public class Dock : MonoBehaviour
     public GameManager GM;
     public ControlledShip Ship;
     public GameObject player;
+    public GameObject tempLocation;
 
     public int pointedNeeded;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player")) {
@@ -30,9 +20,14 @@ public class Dock : MonoBehaviour
                 GM.points++; //Gave the player a point so cannon can't be spammed
                 Debug.Log("Ship is controlled");
                 Ship.numShots = Ship.defaultShots;
+                player.transform.position = tempLocation.transform.position;
 
             }
         }
         
+    }
+
+    public void bringPlayer() {
+        player.transform.position = this.transform.position;
     }
 }

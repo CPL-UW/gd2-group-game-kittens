@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
 * Code to manage the game
@@ -29,13 +30,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject fence;
     public int numFences;
 
-    //public GameObject dock;
+    [SerializeField] Heart healthManager;
+    [SerializeField] GameObject tempLocation;
+    [SerializeField] GameObject player1;
+    [SerializeField] GameObject player2;
     
 
     void Start()
     {
         //SpawnCarrots();
         SpawnFences();
+
+        //Debug.Log(healthManager.playerHealth + " " + healthManager.player2Health);
     }
 
     // Update is called once per frame
@@ -48,6 +54,16 @@ public class GameManager : MonoBehaviour
         }
         if(((points + points2) % 10 == 1) && !summonChest) {
             summonChest = true;
+        }
+        if(healthManager.playerHealth <= 0) {
+            player1.transform.position = tempLocation.transform.position;
+        }
+        if(healthManager.player2Health <= 0) {
+            player2.transform.position = tempLocation.transform.position;
+        }
+
+        if(healthManager.playerHealth <= 0 && healthManager.player2Health <= 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 
