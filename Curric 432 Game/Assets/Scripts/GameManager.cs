@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 */
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] bool useFences;
+
     public GameObject carrot; //Carrots to spawn
     [SerializeField]
     int numCarrots; //Number of carrots to spawn
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //SpawnCarrots();
-        SpawnFences();
+        if(useFences) SpawnFences();
     }
 
     // Update is called once per frame

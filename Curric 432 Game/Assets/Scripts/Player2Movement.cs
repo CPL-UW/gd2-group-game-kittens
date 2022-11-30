@@ -106,7 +106,7 @@ public class Player2Movement : MonoBehaviour
         //Flips sprite based on direction
         if(movement.x < 0) {
             playerSprite.flipX = true;
-        } else {
+        } else if(movement.x > 0) {
             playerSprite.flipX = false;
         }
 

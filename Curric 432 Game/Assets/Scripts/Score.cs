@@ -12,10 +12,19 @@ public class Score : MonoBehaviour
     public ItemCollect items;
     public int carrots;
     public GameManager gameManager;
+    public bool isPlayer2;
+
+    void Start() {
+         
+    }
 
     //Updates text
     void Update()
     {
-        scoreText.text = gameManager.points.ToString();
+        if(!isPlayer2) {
+            scoreText.text = gameManager.points.ToString();
+        } else {
+            scoreText.text = gameManager.points2.ToString();
+        }
     }
 }
