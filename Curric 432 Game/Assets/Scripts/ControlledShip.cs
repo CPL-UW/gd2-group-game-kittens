@@ -7,7 +7,7 @@ public class ControlledShip : MonoBehaviour
     public Rigidbody2D rb;
 
     public Rigidbody2D cannon;
-    int directionY = 1;
+    //int directionY = 1;
     [SerializeField] float lowestY;
     [SerializeField] float highestY;
     [SerializeField] private KeyCode fireKey;

@@ -17,10 +17,18 @@ public class Carrot : MonoBehaviour
 
     //Other objects
     public GameObject shine; //Object to create when carrot is revealed
+    private float _spawnpointY;
+    private float _direction;
 
     void Start() {
         //By default, carrot sprite isn't rendered
         renderer = this.gameObject.GetComponent<SpriteRenderer>();
+        _spawnpointY = transform.position.y;
+        _direction = 1;
+    }
+
+    void Update() {
+        carrotAnimation();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -45,5 +53,17 @@ public class Carrot : MonoBehaviour
         if(collision.gameObject.CompareTag("Player2") && canCollect) {
             Destroy(this.gameObject);
         }
+    }
+
+    //Shows location
+    void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, 0.5f);
+    }
+
+    void carrotAnimation() {
+        transform.position = new Vector2(transform.position.x, transform.position.y + 0.005f*(_direction));
+        if(transform.position.y >= _spawnpointY + 1) _direction*=-1;
+        if(transform.position.y <= _spawnpointY) _direction*=-1;
     }
 }

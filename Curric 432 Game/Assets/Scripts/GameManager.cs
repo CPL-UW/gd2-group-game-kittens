@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     
     public int points; //Points/Number of golden carrots collected
     public int points2; //Points/Number of golden carrots collected
+    public int pointsToWin; //Points needed to win game
 
 
     public bool summonChest; //Whether a chest can spawn or not
@@ -55,6 +56,16 @@ public class GameManager : MonoBehaviour
             summonChest = true;
         }
 
+        if(pointsToWin == points) {
+            VariableController.PlayerWhoWon = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+
+        if(pointsToWin == points2) {
+            VariableController.PlayerWhoWon = 2;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+
         //Moves player offscreen if 0 health
         if(healthManager.playerHealth <= 0) {
             player1.transform.position = tempLocation.transform.position;
@@ -63,10 +74,12 @@ public class GameManager : MonoBehaviour
             player2.transform.position = tempLocation.transform.position;
         }
 
+        /*
         //Changes scene to end screen if both players are at 0 health
         if(healthManager.playerHealth <= 0 && healthManager.player2Health <= 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
+        */
     }
 
     //Add a point
@@ -88,12 +101,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Debug gizmo to show area where carrots spawn;
+    void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(new Vector2(0,(minY+maxY)/2), new Vector2(Mathf.Abs(minX) + Mathf.Abs(maxX), Mathf.Abs(minY) + Mathf.Abs(maxY)));
+    }
+
     //Randomly spawns sparkles
     public void SparkleScreen() {
-        // for(int i = 0; i < numCarrots; i++)
-        // {
-        //     Instantiate(sparkles, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), transform.rotation);
-        // }
         Instantiate(screenSparkles, new Vector3(0, -2, 0), transform.rotation);
     }
 
