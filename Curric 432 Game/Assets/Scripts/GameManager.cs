@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool useFences;
 
     public GameObject carrot; //Carrots to spawn
+    public int carrotSpawnReq; //Number of carrots needed to spawn more
     [SerializeField]
     int numCarrots; //Number of carrots to spawn
     public int minX; //Min X to randomly spawn (default was -11)
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public bool summonChest; //Whether a chest can spawn or not
     public GameObject FallingChest;
-
+    public GameObject screenSparkles;
     public GameObject sparkles;
 
     [SerializeField] private GameObject fence;
@@ -46,11 +47,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Summons a chest if a player obtains 10 points
-        if(((points + points2) % 10 == 0) && summonChest) {
+        if(((points + points2) % carrotSpawnReq == 0) && summonChest) {
             Instantiate(FallingChest, new Vector3(0, 9, 0), transform.rotation);
             summonChest = false;
         }
-        if(((points + points2) % 10 == 1) && !summonChest) {
+        if(((points + points2) % carrotSpawnReq == 1) && !summonChest) {
             summonChest = true;
         }
 
@@ -89,10 +90,11 @@ public class GameManager : MonoBehaviour
 
     //Randomly spawns sparkles
     public void SparkleScreen() {
-        for(int i = 0; i < numCarrots; i++)
-        {
-            Instantiate(sparkles, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), transform.rotation);
-        }
+        // for(int i = 0; i < numCarrots; i++)
+        // {
+        //     Instantiate(sparkles, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0), transform.rotation);
+        // }
+        Instantiate(screenSparkles, new Vector3(0, -2, 0), transform.rotation);
     }
 
     //Randomly spawn fences (walls)
