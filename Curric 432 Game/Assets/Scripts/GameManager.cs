@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject tempLocation;
     [SerializeField] GameObject player1;
     [SerializeField] GameObject player2;
+
+    public ControlledShip Ship;
+
     
 
     void Start()
@@ -68,8 +71,11 @@ public class GameManager : MonoBehaviour
 
         //Moves player offscreen if 0 health
         if(healthManager.playerHealth <= 0) {
-            player1.transform.position = tempLocation.transform.position;
+            //player1.transform.position = tempLocation.transform.position;
+            controlShip(player1);
         }
+        //if(Ship.isControlled && Ship.numShots <= 0) player1.transform.position = new Vector3(0, 2, 0);
+
         if(healthManager.player2Health <= 0) {
             player2.transform.position = tempLocation.transform.position;
         }
@@ -121,6 +127,17 @@ public class GameManager : MonoBehaviour
             randX = Mathf.Round(Random.Range(minX, maxX));
             randY = Mathf.Round(Random.Range(minY, maxY));
             Instantiate(fence, new Vector3(randX, randY, 0), transform.rotation);
+        }
+    }
+
+    void controlShip(GameObject player) {
+        healthManager.RestoreHearts();
+        if(!Ship.isControlled) {
+                Ship.isControlled = true;
+                points++; //Gave the player a point so cannon can't be spammed
+                Debug.Log("Ship is controlled");
+                Ship.numShots = Ship.defaultShots; //Resets the number of cannon balls the player has
+                player.transform.position = tempLocation.transform.position; //Moves player offscreen
         }
     }
 
