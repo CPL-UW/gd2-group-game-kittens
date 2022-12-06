@@ -31,10 +31,18 @@ public class Heart : MonoBehaviour
         }
     }
 
-    public void RestoreHearts() {
-        playerHealth = 3;
-        for(int i = 0; i < hearts.Length; i++) {
-                hearts[i].color = Color.white;
+    public void RestoreHearts(int player) {
+        if(player == 1) {
+            playerHealth = 3;
+            for(int i = 0; i < hearts.Length; i++) {
+                    hearts[i].color = Color.white;
+            }
+        }
+        if(player == 2) {
+            player2Health = 3;
+            for(int i = 0; i < P2hearts.Length; i++) {
+                    P2hearts[i].color = Color.white;
+            }
         }
     }
     

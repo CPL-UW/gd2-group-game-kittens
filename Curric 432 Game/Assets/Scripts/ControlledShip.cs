@@ -13,6 +13,8 @@ public class ControlledShip : MonoBehaviour
     [SerializeField] private KeyCode fireKey;
     [SerializeField] private KeyCode moveUpKey;
     [SerializeField] private KeyCode moveDownKey;
+    [SerializeField] private bool aimLeft;
+    float direction;
     public float moveSpeed;
     float power;
     bool heldKey = false;
@@ -33,6 +35,11 @@ public class ControlledShip : MonoBehaviour
     void Start()
     {
         numShots = defaultShots;
+        if(aimLeft) {
+            direction = -1;
+        } else {
+            direction = 1;
+        }
     }
 
     // Update is called once per frame
@@ -65,7 +72,7 @@ public class ControlledShip : MonoBehaviour
                 numShots--;
 
                 cannonball = Instantiate(cannon, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation) as Rigidbody2D;
-                cannonball.AddForce(new Vector3(1, 1, 0) * 2 * progressBar, ForceMode2D.Impulse);
+                cannonball.AddForce(new Vector3(direction, 1, 0) * 2 * progressBar, ForceMode2D.Impulse);
 
                 progressBar = 0;
                 Bar.SetValue(0);
