@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb784c313b743c341a71456f28a9af41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prob: 75
+  prob: 35
   fence:
   - {fileID: 6158163632269216030}
   - {fileID: 6158163632754348619}
