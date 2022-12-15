@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Ship is controlled");
                 ship.numShots = ship.defaultShots; //Resets the number of cannon balls the player has
                 player.transform.position = tempLocation.transform.position; //Moves player offscreen
+                Instantiate(sparkles, new Vector3(ship.transform.position.x, ship.transform.position.y, 0), transform.rotation);
         }
     }
 

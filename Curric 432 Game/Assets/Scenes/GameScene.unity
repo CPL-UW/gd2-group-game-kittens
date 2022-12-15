@@ -41552,6 +41552,7 @@ MonoBehaviour:
   defaultShots: 10
   numShots: 0
   dock: {fileID: 1206703508}
+  shine: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
   chargeSpeed: 5
   Bar: {fileID: 942979547}
 --- !u!4 &1753094005
@@ -42664,6 +42665,7 @@ MonoBehaviour:
   defaultShots: 10
   numShots: 0
   dock: {fileID: 1312502816}
+  shine: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
   chargeSpeed: 5
   Bar: {fileID: 918303432}
 --- !u!212 &1937326643

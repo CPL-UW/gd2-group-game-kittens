@@ -24,6 +24,8 @@ public class ControlledShip : MonoBehaviour
     public int numShots;
     [SerializeField] Dock dock;
 
+    [SerializeField] GameObject shine;
+
     Rigidbody2D cannonball;
 
     [SerializeField] float chargeSpeed;

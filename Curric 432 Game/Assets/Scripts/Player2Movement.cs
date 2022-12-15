@@ -153,6 +153,7 @@ public class Player2Movement : MonoBehaviour
             digHeld = false;
             digProgress = 0;
             digBar.SetValue(0);
+            FindObjectOfType<AudioManager>().Play("DigSound");
         }
 
         //Fills up progress bar
@@ -179,6 +180,7 @@ public class Player2Movement : MonoBehaviour
             SpriteRenderer renderer = other.gameObject.GetComponent<SpriteRenderer>();
             if(renderer.enabled) {
                 GM.AddPoint2();
+                FindObjectOfType<AudioManager>().Play("FoundSound");
             }
         }
 
@@ -186,7 +188,7 @@ public class Player2Movement : MonoBehaviour
             heart.player2Health--;
             heart.UpdateHearts();
 
-            //FindObjectOfType<AudioManager>().Play("DamageSound");
+            FindObjectOfType<AudioManager>().Play("DamageSound");
 
             Debug.Log(heart.player2Health);
         }
