@@ -36401,7 +36401,7 @@ MonoBehaviour:
   screenSparkles: {fileID: 8662808827188358904, guid: 4b73b86edf9525c4bb3a3d581af682a3, type: 3}
   sparkles: {fileID: 688068099401591815, guid: 37addbf1aa63d3e4881ac07fc3fd8ab1, type: 3}
   fence: {fileID: 6158163632253525540, guid: 700bfac230808e141ae4cd0fd6157a94, type: 3}
-  numFences: 5
+  numFences: 0
   healthManager: {fileID: 985004174}
   tempLocation: {fileID: 773192464}
   player1: {fileID: 974629187}
@@ -44477,7 +44477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -499.5, y: -216.72}
+  m_AnchoredPosition: {x: -499.5, y: -216.71999}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2064172523
