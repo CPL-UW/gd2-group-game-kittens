@@ -14,7 +14,7 @@ public class FillPit : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pit"))
         {
-            Destroy(pit);
+            DestroyImmediate(pit);
             //GetComponent<AudioSource>().Play();
         }
     }
