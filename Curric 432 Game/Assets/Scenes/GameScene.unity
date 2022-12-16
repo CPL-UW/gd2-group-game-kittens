@@ -37959,8 +37959,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Player 1 Move: WASD\nE: Smell\nSpace (hold): Dig\nF: Use Item\nR: Drop
-    Item \nShift: Dash\n"
+  m_Text: 'Player 1 / Player 2 Controls
+
+    Move: WASD / IJKL
+
+    Smell: Q / U
+
+    Dig:
+    E / O (hold)
+
+'
 --- !u!222 &1434767084
 CanvasRenderer:
   m_ObjectHideFlags: 0
