@@ -12,7 +12,7 @@ public class Carrot : MonoBehaviour
     //Attributes
     bool canCollect = false;
     //Components
-    private SpriteRenderer renderer;
+    private SpriteRenderer _carrotRenderer;
     public Rigidbody2D rb;
 
     //Other objects
@@ -22,7 +22,7 @@ public class Carrot : MonoBehaviour
 
     void Start() {
         //By default, carrot sprite isn't rendered
-        renderer = this.gameObject.GetComponent<SpriteRenderer>();
+        _carrotRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         _spawnpointY = transform.position.y;
         _direction = 1;
     }
@@ -35,7 +35,7 @@ public class Carrot : MonoBehaviour
         //When carrot collides with a pit, carrot can be collected and is rendered
         if(collision.gameObject.CompareTag("Pit")) {
             canCollect = true;
-            renderer.enabled = true;
+            _carrotRenderer.enabled = true;
             Instantiate(shine, new Vector3(rb.position.x, rb.position.y, 0), transform.rotation);
             Debug.Log("Carrot can be collected");
         }

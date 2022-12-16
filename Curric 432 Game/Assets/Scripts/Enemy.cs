@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
     float distance; //distance between enemy and target
     float distance2; //distance between enemy and target
-    int frame = 0;
+    //int frame = 0;
     // public float aggroRange; //Range between enemy and target for AI
     public GameObject spawn; //Location enemy will go to if not targeting player
     public Transform player; //Player
