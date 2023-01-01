@@ -11,8 +11,8 @@ IJKL: Move
 U: Smell
 O: Move
 
-## Rules:
-*Fill in later*
+## Game Design Document:
+https://docs.google.com/document/d/1KgcrEm9TgK6KI2xdS4ShFSxrXikGSxaVveNfUroUYiw/edit?usp=sharing  
 
 ### Credits:
 *Fill in later*
